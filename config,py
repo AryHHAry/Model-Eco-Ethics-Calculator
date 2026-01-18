@@ -1,0 +1,144 @@
+# config.py - OPTIONAL: External configuration file
+"""
+Configuration management for AI Model Eco & Ethics Calculator
+Separate file for easier customization and maintenance
+"""
+
+class AppConfig:
+    """Application-wide configuration"""
+    
+    # App metadata
+    APP_NAME = "AI Model Eco & Ethics Calculator"
+    VERSION = "1.0.0"
+    AUTHOR = "Ary HH"
+    AUTHOR_EMAIL = "aryhharyanto@proton.me"
+    
+    # Feature flags
+    ENABLE_EXPORT = True
+    ENABLE_SIDEBAR = True
+    ENABLE_ADVANCED_MODE = False  # Future: advanced calculations
+    
+    # Calculation constants
+    CONSTANTS = {
+        "co2_per_billion_params": 2.0,
+        "inference_co2_per_1k_tokens": 0.5,
+        "energy_cost_per_kwh": 0.10,
+        "tree_co2_absorption": 20,
+        "car_co2_per_km": 0.12,
+        "flight_co2": 1000,
+        "household_water_daily": 300,
+        "home_energy_yearly": 10800
+    }
+    
+    # Data center configurations
+    DATACENTERS = {
+        "us_west_oregon": {
+            "name": "US-West (Oregon)",
+            "carbon_intensity": 350,
+            "water_usage": 2.5,
+            "renewable_percent": 60,
+            "timezone": "America/Los_Angeles"
+        },
+        "us_east_virginia": {
+            "name": "US-East (Virginia)",
+            "carbon_intensity": 450,
+            "water_usage": 3.0,
+            "renewable_percent": 40,
+            "timezone": "America/New_York"
+        },
+        "eu_west_ireland": {
+            "name": "EU-West (Ireland)",
+            "carbon_intensity": 300,
+            "water_usage": 2.0,
+            "renewable_percent": 70,
+            "timezone": "Europe/Dublin"
+        },
+        "eu_central_germany": {
+            "name": "EU-Central (Germany)",
+            "carbon_intensity": 400,
+            "water_usage": 2.8,
+            "renewable_percent": 55,
+            "timezone": "Europe/Berlin"
+        },
+        "eu_north_finland": {
+            "name": "EU-North (Finland)",
+            "carbon_intensity": 200,
+            "water_usage": 1.8,
+            "renewable_percent": 85,
+            "timezone": "Europe/Helsinki"
+        },
+        "asia_pacific_singapore": {
+            "name": "Asia-Pacific (Singapore)",
+            "carbon_intensity": 500,
+            "water_usage": 4.5,
+            "renewable_percent": 25,
+            "timezone": "Asia/Singapore"
+        },
+        "asia_east_tokyo": {
+            "name": "Asia-East (Tokyo)",
+            "carbon_intensity": 480,
+            "water_usage": 3.5,
+            "renewable_percent": 30,
+            "timezone": "Asia/Tokyo"
+        },
+        "global_average": {
+            "name": "Global Average",
+            "carbon_intensity": 450,
+            "water_usage": 3.0,
+            "renewable_percent": 40,
+            "timezone": "UTC"
+        }
+    }
+    
+    # Hardware specifications
+    HARDWARE_SPECS = {
+        "nvidia_a100": {
+            "name": "NVIDIA A100",
+            "tdp": 400,
+            "efficiency": 1.0,
+            "cost_per_hour": 3.0,
+            "generation": "Ampere",
+            "release_year": 2020
+        },
+        "nvidia_h100": {
+            "name": "NVIDIA H100",
+            "tdp": 700,
+            "efficiency": 1.4,
+            "cost_per_hour": 8.0,
+            "generation": "Hopper",
+            "release_year": 2022
+        },
+        "nvidia_v100": {
+            "name": "NVIDIA V100",
+            "tdp": 300,
+            "efficiency": 0.7,
+            "cost_per_hour": 2.0,
+            "generation": "Volta",
+            "release_year": 2017
+        },
+        "tpu_v4": {
+            "name": "TPU v4",
+            "tdp": 350,
+            "efficiency": 1.2,
+            "cost_per_hour": 3.5,
+            "generation": "TPU",
+            "release_year": 2021
+        },
+        "tpu_v5": {
+            "name": "TPU v5",
+            "tdp": 400,
+            "efficiency": 1.5,
+            "cost_per_hour": 4.5,
+            "generation": "TPU",
+            "release_year": 2023
+        }
+    }
+    
+    # UI customization
+    UI_CONFIG = {
+        "theme_primary_color": "#667eea",
+        "theme_secondary_color": "#764ba2",
+        "max_width": 1200,
+        "show_warnings": True,
+        "default_expanded": True
+    }
